@@ -1,5 +1,5 @@
 ### 使用Spring-Boot-Admin管理Spring-Boot项目
-如需运行 demo ,请在 commons/src/main/resources/config/application-commons-mail.yml 文件中配置以下参数
+如需运行 demo ,请在 [commons/src/main/resources/config/application-commons-mail.yml](commons/src/main/resources/config/application-commons-mail.yml) 文件中配置以下参数
 - spring.mail.host
 - spring.mail.username
 - spring.mail.password
