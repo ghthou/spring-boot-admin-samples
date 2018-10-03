@@ -3,6 +3,7 @@
 - spring.mail.host
 - spring.mail.username
 - spring.mail.password
+
 在 server/src/main/resources/application.yml 中配置以下参数
 - spring.boot.admin.notify.mail.to
 #### 博客地址
