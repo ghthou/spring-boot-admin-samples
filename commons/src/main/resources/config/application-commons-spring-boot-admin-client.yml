@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    include:
+      # 引入前面的俩个配置文件
+      - commons-spring-boot-admin-client-user
+      - commons-spring-boot-admin-server
+  boot:
+    admin:
+      client:
+        # 配置文档
+        # http://codecentric.github.io/spring-boot-admin/current/#spring-boot-admin-client
+        enabled: true
+        # 服务端地址
+        url: ${spring-boot-admin.server.url}
+        # 服务端帐号
+        username: ${spring-boot-admin.server.username}
+        # 服务端密码
+        password: ${spring-boot-admin.server.password}
+        instance:
+          metadata:
+            # 配置登录本服务需要的帐号与密码,用于让 spring-boot-admin 登录本服务
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+
+management:
+  endpoints:
+    jmx:
+      exposure:
+        exclude: "*"
+    web:
+      exposure:
+        include: "*"
+        # 排除关闭服务端点
+        exclude:
+          - shutdown
+  endpoint:
+    health:
+      # 只有用户登录才显示 health 详情
+      show-details: when_authorized
+    # 禁用关闭服务端点
+    shutdown:
+      enabled: false

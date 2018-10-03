@@ -1,0 +1,7 @@
+spring:
+  application:
+    # 项目名称
+    name: client
+  profiles:
+    include:
+      - commons-spring-boot-admin-client

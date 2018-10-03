@@ -1,0 +1,6 @@
+spring:
+  security:
+    user:
+      # 配置默认用户
+      name: admin
+      password: admin

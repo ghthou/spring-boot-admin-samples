@@ -1,0 +1,10 @@
+spring-boot-admin:
+  server:
+    # spring-boot-admin server 端口
+    port: 8090
+    # spring-boot-admin server 注册基本地址
+    url: http://localhost:${spring-boot-admin.server.port}
+    # spring-boot-admin server 用户名
+    username: root
+    # spring-boot-admin server 密码
+    password: root

@@ -1,0 +1,26 @@
+server:
+  # 配置服务端口
+  port: ${spring-boot-admin.server.port}
+spring:
+  profiles:
+    include:
+      - commons-mail
+      - commons-spring-boot-admin-server
+  application:
+    # 应用名称,用于与其他应用进行区分
+    name: spring-boot-admin
+  security:
+    user:
+      # 配置默认用户
+      name: ${spring-boot-admin.server.username}
+      password: ${spring-boot-admin.server.password}
+  boot:
+    admin:
+      notify:
+        mail:
+          # http://codecentric.github.io/spring-boot-admin/current/#mail-notifications
+          enabled: true
+          # 发件人
+          from: Spring-Boot-Admin <${spring.mail.username}>
+          # 收件人,如果存在多个,使用逗号分隔
+          to: example@example.com
